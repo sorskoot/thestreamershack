@@ -7,6 +7,15 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
+this is the homepage
+<ul class="shop-items">
+    {%- for item in site.data.gear -%}    
+    <li>
+        {{ item.name }}
+    </li>
+    {%- endfor -%}
+</ul>
+  <!-- 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
@@ -26,13 +35,12 @@ layout: default
         {%- endif -%}
       </li>
       {%- endfor -%}
-    </ul>
-
+    </ul> 
     <p class="feed-subscribe">
       <a href="{{ 'feed.xml' | relative_url }}">
         <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
       </a>
     </p>
-  {%- endif -%}
+  {%- endif -%} -->
 
 </div>

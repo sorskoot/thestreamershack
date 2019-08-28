@@ -1,0 +1,20 @@
+{
+  "name": "thestreamershack",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/sorskoot/thestreamershack/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "start": "bundle exec jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorskoot/thestreamershack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sorskoot/thestreamershack/issues"
+  },
+  "homepage": "https://github.com/sorskoot/thestreamershack#readme"
+}

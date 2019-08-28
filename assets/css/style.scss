@@ -2,3 +2,11 @@
 ---
 
 @import "minima";
+body{
+    background:red;
+}
+.shop-items {
+    display: grid;
+    grid-gap: 10px;
+        grid-template-columns: repeat(6, 100px);
+}

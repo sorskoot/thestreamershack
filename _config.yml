@@ -8,8 +8,8 @@ plugins:
   - sass
 
 baseurl: ""
-paginate: 5
-paginate_path: "page:num"
+# paginate: 5
+# paginate_path: "page:num"
 lang: en
 
 # twitter_username: sorskoot
