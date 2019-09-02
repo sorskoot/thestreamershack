@@ -1,10 +1,10 @@
 ---
 ---
 
-@import "minima";
+@import "{{ site.theme }}";
 
 body{
-    background:red;
+    background-color:red;
 }
 .shop-items {
     display: grid;
