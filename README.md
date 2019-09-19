@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# Notes
 
-You can use the [editor on GitHub](https://github.com/sorskoot/thestreamershack/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+- do a [product search](https://affiliate-program.amazon.com/home/productlinks/search)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- we need the following info:
+  
+  - name: `document.querySelector('#ac-productlinks-preview-panel-text > a').innerText.split('-')[0].trim()`
+  - description: `document.querySelector('#ac-productlinks-preview-panel-text > a').innerText.split('-').slice(1).join('-').trim()`
+  - link: `document.querySelector('.ac-ad-code-short').value`
+  - image: `document.querySelector('#ac-productlinks-preview-panel-image > a > img').getAttribute('src')`
+  - tracking: `document.querySelector('#ac-productlinks-preview-panel-image > img').getAttribute('src')`
 
-### Markdown
+## steps to get data
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1) run this on the product page:
+function getData(){
+    return {
+    name: document.querySelector('#ac-productlinks-preview-panel-text > a').innerText.split('-')[0].trim(),
+description: document.querySelector('#ac-productlinks-preview-panel-text > a').innerText.split('-').slice(1).join('-').trim(),
+link: document.querySelector('.ac-ad-code-short').value,
+image: document.querySelector('#ac-productlinks-preview-panel-image > a > img').getAttribute('src'),
+tracking: document.querySelector('#ac-productlinks-preview-panel-image > img').getAttribute('src')
+    }
+}
 
-```markdown
-Syntax highlighted code block
+JSON.stringify(getData())
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sorskoot/thestreamershack/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+2) past in Notepad ++
+3) Format, remove quotes and comma at the end of the line
+4) copy to Yaml

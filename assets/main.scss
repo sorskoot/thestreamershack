@@ -2,14 +2,67 @@
 ---
 
 @import "minima";
+@import url("https://fonts.googleapis.com/css?family=Patua+One|Quicksand&display=swap");
 
+$normal-font: "Quicksand", sans-serif;
+$title-font: "Patua One", cursive;
+
+$highlight-color: rgb(182, 0, 255);
+
+$magic-number: 15px;
+
+body {
+  font-family: $normal-font;
+}
+.introduction {
+  font-size: 1.2em;
+}
+.shop {
+  font-size: 1em;
+}
+.site-title, .site-title:visited {
+    color: #FFF;
+    font-size: 2.5em;
+}
+.page-link,.page-link:visited{
+    color: #FFF;
+}
+.site-header {
+  position: fixed;
+  width: 100%;
+  background-color: $highlight-color;
+  border: none;
+}
+
+.page-heading {
+  font-family: $title-font;
+}
+.wrapper {
+  max-width: 960 - $magic-number * 2;
+}
+.page-content {
+  margin-top: $magic-number * 2;
+}
 .shop-items {
   list-style: none;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(6, 100px);
+  grid-gap: $magic-number;
+  grid-template-columns: repeat(3, 33%);
   & .item {
-      border:1px solid black;
-      padding: 10px;
+    padding: $magic-number;
+    box-shadow: transparentize($highlight-color, 0.82) 0 0 5px 1px;
+
+    & .title {
+      font-family: $title-font;
+      text-align: center;
+    }
+    & .image-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    & .link {
+      color: black;
+      text-decoration: none;
+    }
   }
 }

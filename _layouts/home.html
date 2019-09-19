@@ -3,19 +3,34 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
+    {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+    {%- endif -%}
 
-this is the homepage
-<ul class="shop-items">
-    {%- for item in site.data.gear -%}    
-    <li class="item">
-        {{ item.name }}
-    </li>
-    {%- endfor -%}
-</ul>
-  <!-- 
+    <section class="introduction">
+        {{content}}
+    </section>
+    <section class="shop">
+        <ul class="shop-items">
+            {%- for item in site.data.gear -%}
+            <li class="item">
+                <a href="{{ item.link }}" class="link">
+                    <h3 class="title"> {{ item.name }} </h3>
+                    <div>
+                        {{ item.description }}
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="image" src="{{ item.image }}" border="0" />
+                    </div>
+                </a>
+                </img src="{{ item.tracking }}" width="1" height="1" border="0" alt=""
+                    style="border:none !important; margin:0px !important;" />
+            </li>
+            {%- endfor -%}
+        </ul>
+
+    </section>
+    <!-- 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
