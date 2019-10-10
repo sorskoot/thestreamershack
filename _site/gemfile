@@ -4,6 +4,7 @@ gem "jekyll-paginate", group: :jekyll_plugins
 gem "kramdown", group: :jekyll_plugins
 gem "jemoji", group: :jekyll_plugins
 gem "rouge", group: :jekyll_plugins
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 
  

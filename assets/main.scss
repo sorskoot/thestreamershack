@@ -7,7 +7,7 @@
 $normal-font: "Quicksand", sans-serif;
 $title-font: "Patua One", cursive;
 
-$highlight-color: rgb(182, 0, 255);
+$highlight-color: {{site.theme_color}};
 
 $magic-number: 15px;
 
