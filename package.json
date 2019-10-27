@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sorskoot/thestreamershack/issues"
   },
-  "homepage": "https://github.com/sorskoot/thestreamershack#readme"
+  "homepage": "https://github.com/sorskoot/thestreamershack#readme",
+  "devDependencies": {
+    "hint": "^5.3.3"
+  }
 }
